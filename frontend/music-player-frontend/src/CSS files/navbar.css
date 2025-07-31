@@ -1,0 +1,209 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  padding: 12px 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  position: fixed;
+  width : 99%;
+  z-index: 1000;
+  border-radius: 20px;
+}
+
+/* Left section: logo + search */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.logo:hover {
+  color: #f4f4f4;
+}
+
+/* Search form */
+.search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.search-input {
+  padding: 6px 36px 6px 12px;
+  border-radius: 20px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  transition: background-color 0.3s;
+  width: 240px;
+}
+.search-input:focus {
+  outline: none;
+  background-color: #444;
+}
+.search-input::placeholder {
+  color: #aaa;
+}
+.search-button {
+  position: absolute;
+  right: 6px;
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+.search-button:hover {
+  color: #fff;
+}
+
+/* Right section: nav links and dropdowns */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Standard nav link */
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+.nav-link:hover {
+  color: #bbb;
+  background-color: #444;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+/* Dropdown wrapper */
+.dropdown {
+  position: relative;
+}
+.dropdown button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.3s;
+}
+.dropdown button:hover {
+  color: #bbb;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  background-color: #333;
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 140px;
+}
+
+/* Profile dropdown */
+.profile-dropdown {
+  position: relative;
+}
+.profile-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.profile-btn:hover {
+  color: #bbb;
+}
+.profile-menu {
+  position: absolute;
+  top: 32px;
+  right: 0;
+  background: #333;
+  color: white;
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 150px;
+}
+.profile-menu a,
+.profile-menu button {
+  color: white;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 4px 0;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.profile-menu a:hover,
+.profile-menu button:hover {
+  color: #10d62e;
+}
+.profile-menu {
+  background-color: #333;
+  border-radius: 8px;
+  padding: 10px;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.profile-welcome {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.profile-option {
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.profile-option:hover {
+  background-color: #555;
+}
+
+.logout-btn {
+  background-color: #ff4d4d;
+  border: none;
+  padding: 8px;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.logout-btn:hover {
+  background-color: #272727;
+}

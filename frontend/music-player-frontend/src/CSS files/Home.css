@@ -1,0 +1,110 @@
+/* Home.css */
+
+.home-page {
+  background-color: #2e2e2e;
+  color: white;
+  padding:  2rem 2rem;
+  min-height: 100vh;
+  padding-top: 80px;
+  height: fit-content;
+  font-family: 'Arial', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.welcome-text {
+  font-size: 2rem;
+  /* text-align: center; */
+  /* margin-top: 1rem; */
+  font-weight: bold;
+}
+
+.search-title {
+  font-size: 2rem;
+  color: #22d3ee;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.song-category {
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.song-category h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #f59e0b;
+}
+
+.horizontal-scroll {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-track {
+  background: #2e2e2e;
+}
+
+.song-card {
+  min-width: 150px;
+  max-width: 150px;
+  background-color: transparent;
+  box-shadow: none;
+  cursor: pointer;
+  padding: 0;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.song-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.song-card:hover img {
+  transform: scale(1.05);
+}
+
+.song-info h3 {
+  font-size: 1rem;
+  margin: 8px 0 2px 0;
+  color: white;
+}
+
+.song-info p {
+  font-size: 0.8rem;
+  color: #bbb;
+  margin: 0;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.back-button {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #22d3ee;
+  text-decoration: underline;
+  cursor: pointer;
+}

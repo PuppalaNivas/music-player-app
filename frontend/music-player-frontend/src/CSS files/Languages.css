@@ -1,0 +1,21 @@
+Languages.css
+
+.languages-page {
+    padding: 2rem;
+    background-color: #121212;
+    color: #fff;
+    min-height: 100vh;
+  }
+  
+  .languages-page h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #facc15; /* Yellow shade for highlight */
+  }
+  
+  .song-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 1.5rem;
+  }
+  

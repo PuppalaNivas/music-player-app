@@ -1,0 +1,186 @@
+.auth-overlay-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.auth-overlay-card {
+  position: relative;
+  background: #222;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  width: 360px;
+  max-width: 90%;
+  overflow: hidden;
+  animation: cardAnimation 0.8s ease-out;
+  color: white;
+  transform: translateY(-20px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.auth-overlay-card:hover {
+  transform: translateY(0);
+}
+
+.auth-overlay-card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(255, 255, 255, 0.2);
+  background: linear-gradient(45deg, #ff7f7f, #ff5f5f, #e0aaff, #ff9fa0);
+  background-size: 400% 400%;
+  animation: rotatingBorder 6s linear infinite;
+  z-index: -1;
+}
+
+.cat-image {
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  z-index: 2;
+  height: 5rem;
+  animation: floatDown 0.8s ease-out forwards;
+}
+
+.auth-overlay-card h2 {
+  position: relative;
+  text-align: center;
+  margin-top: 2rem; /* Push down due to cat image */
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.auth-overlay-card h2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5));
+  border-radius: 8px;
+  animation: textBackgroundAnimation 3s infinite ease-in-out;
+  z-index: -1;
+}
+
+.auth-overlay-card input {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background-color: #333;
+  color: white;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.auth-overlay-card input:focus {
+  border-color: #6c63ff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(108, 99, 255, 0.7);
+  transform: scale(1.02);
+}
+
+.auth-overlay-card input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.auth-overlay-card button {
+  width: 50%;
+  padding: 0.8rem;
+  background-color: #1f761c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease, transform 0.2s ease;
+  font-size: 1rem;
+  margin-left: 25%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.auth-overlay-card button:hover {
+  background-color: #1b1c1b;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.auth-overlay-card p {
+  text-align: center;
+  color: #0a5e0d;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.auth-overlay-card p:hover {
+  text-decoration: underline;
+  color: #009ecf;
+}
+
+@keyframes rotatingBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes textBackgroundAnimation {
+  0% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes cardAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatDown {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
